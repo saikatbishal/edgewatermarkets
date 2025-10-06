@@ -1,0 +1,41 @@
+.price-view {
+  padding: 1rem;
+}
+
+.price-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  font-weight: bold;
+  color: #666;
+}
+
+.value {
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+.bid {
+  color: #4caf50;
+}
+
+.ask {
+  color: #f44336;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: #999;
+  text-align: right;
+  margin-top: 0.5rem;
+}

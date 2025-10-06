@@ -1,0 +1,39 @@
+import React from "react";
+import "./SystemStatus.css";
+
+interface Channel {
+  id: string;
+  name: string;
+  status: "subscribed" | "available";
+  subscribers: number;
+  lastUpdate: string;
+}
+
+interface SystemStatusProps {
+  channels: Channel[];
+}
+
+const SystemStatus: React.FC<SystemStatusProps> = ({ channels }) => {
+  return (
+    <div className="system-status">
+      <h3>System Status</h3>
+      <div className="channels-list">
+        {channels.map((channel) => (
+          <div key={channel.id} className={`channel-item ${channel.status}`}>
+            <span className="channel-name">{channel.name}</span>
+            <span className="channel-status">
+              {channel.status === "subscribed" ? 
+                `Active (${channel.subscribers} subscriber${channel.subscribers !== 1 ? 's' : ''})` : 
+                "Available"}
+            </span>
+            <span className="channel-time">
+              {new Date(channel.lastUpdate).toLocaleTimeString()}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default SystemStatus;

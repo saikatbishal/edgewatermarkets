@@ -1,0 +1,38 @@
+.retry-error,
+.retry-loading {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.retry-error h3 {
+  color: #f44336;
+  margin-bottom: 1rem;
+}
+
+.retry-error button {
+  background-color: #61dafb;
+  color: #1a1a1a;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.retry-error button:hover {
+  background-color: #4fa8d3;
+}
+
+.retry-loading {
+  background-color: #333;
+}
+
+.retry-loading p {
+  color: #61dafb;
+  margin: 0;
+}

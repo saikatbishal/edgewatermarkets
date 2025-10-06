@@ -1,0 +1,26 @@
+.subscribe-control {
+  padding: 1rem;
+}
+
+.subscribe-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.subscribe-button:not(.subscribed) {
+  background-color: #4caf50;
+  color: white;
+}
+
+.subscribe-button.subscribed {
+  background-color: #f44336;
+  color: white;
+}
+
+.subscribe-button:hover {
+  opacity: 0.9;
+}

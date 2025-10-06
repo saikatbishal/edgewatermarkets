@@ -1,0 +1,19 @@
+{
+  "name": "edgewatermarket",
+  "version": "1.0.0",
+  "description": "coinbase api integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "npm",
+    "git",
+    "docker"
+  ],
+  "author": "saikatbishal",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

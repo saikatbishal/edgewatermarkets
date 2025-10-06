@@ -1,0 +1,44 @@
+.match-view {
+  padding: 1rem;
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.trades-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.trades-table th,
+.trades-table td {
+  padding: 0.75rem;
+  text-align: right;
+  color: #ffffff;
+}
+
+.trades-table th {
+  background-color: #444;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.trade-row {
+  border-bottom: 1px solid #444;
+}
+
+.trade-row:hover {
+  background-color: #3a3a3a;
+}
+
+.trade-row.buy td {
+  color: #4caf50;
+}
+
+.trade-row.sell td {
+  color: #f44336;
+}

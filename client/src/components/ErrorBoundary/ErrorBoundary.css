@@ -1,0 +1,52 @@
+.error-boundary {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  color: #fff;
+  text-align: center;
+}
+
+.error-boundary h2 {
+  color: #f44336;
+  margin-bottom: 1rem;
+}
+
+.error-boundary details {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #333;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.error-boundary summary {
+  cursor: pointer;
+  color: #61dafb;
+  margin-bottom: 0.5rem;
+}
+
+.error-boundary pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #f44336;
+  margin: 0;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  border-radius: 4px;
+}
+
+.error-boundary button {
+  background-color: #61dafb;
+  color: #1a1a1a;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.error-boundary button:hover {
+  background-color: #4fa8d3;
+}
