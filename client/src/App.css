@@ -1,0 +1,116 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.app-header {
+  background-color: #2a2a2a;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #61dafb;
+}
+
+.connection-status {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.connection-status.connected {
+  background-color: #4caf50;
+}
+
+.connection-status.disconnected {
+  background-color: #f44336;
+}
+
+.app-content {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.crypto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.crypto-card {
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #333;
+}
+
+.crypto-card h2 {
+  margin: 0 0 1rem 0;
+  color: #61dafb;
+  font-size: 1.4rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.control-section {
+  margin-bottom: 1rem;
+}
+
+.data-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.price-section,
+.trades-section {
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.price-section h3,
+.trades-section h3 {
+  margin: 0 0 0.8rem 0;
+  color: #61dafb;
+  font-size: 1.1rem;
+}
+
+.status-section {
+  background-color: #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+@media (max-width: 768px) {
+  .crypto-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
