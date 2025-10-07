@@ -1,8 +1,8 @@
-import EventEmitter from 'events';
+import EventEmitter from "events";
 
 class MockCoinbaseService extends EventEmitter {
   subscribeToProducts = jest.fn();
-  getAvailableProducts = jest.fn().mockReturnValue(['BTC-USD']);
+  getAvailableProducts = jest.fn().mockReturnValue(["BTC-USD"]);
   close = jest.fn();
 }
 

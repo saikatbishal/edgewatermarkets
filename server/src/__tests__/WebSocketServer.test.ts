@@ -14,7 +14,7 @@ describe("WebSocketServer", () => {
     httpServer = createServer();
     wsServer = new SocketServer(httpServer);
     port = 3002; // Changed port to avoid conflicts
-    
+
     // Setup socket event handlers
     wsServer.on("connection", (socket) => {
       socket.emit("welcome", { message: "Welcome to the server!" });
@@ -24,7 +24,7 @@ describe("WebSocketServer", () => {
           socket.emit("error", { message: "Invalid product ID" });
           return;
         }
-        
+
         socket.join(productId);
         socket.emit("subscribed", { productId });
       });
@@ -34,7 +34,7 @@ describe("WebSocketServer", () => {
           socket.emit("error", { message: "Invalid product ID" });
           return;
         }
-        
+
         socket.leave(productId);
         socket.emit("unsubscribed", { productId });
       });
@@ -45,7 +45,7 @@ describe("WebSocketServer", () => {
       // Create client with increased timeout
       clientSocket = Client(`http://localhost:${port}`, {
         reconnection: false,
-        timeout: 10000
+        timeout: 10000,
       });
 
       // Handle initial connection
@@ -74,7 +74,7 @@ describe("WebSocketServer", () => {
     it("should emit welcome message on client connection", (done) => {
       const newClient = Client(`http://localhost:${port}`, {
         reconnection: false,
-        timeout: 10000
+        timeout: 10000,
       });
 
       newClient.on("welcome", (data) => {
@@ -93,7 +93,7 @@ describe("WebSocketServer", () => {
       const newClient = Client(`http://localhost:${port}`, {
         reconnection: false,
       });
-      
+
       newClient.on("connect", () => {
         newClient.disconnect();
         // Add a small delay to allow disconnect to process
